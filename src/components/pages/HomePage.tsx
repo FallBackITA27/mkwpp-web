@@ -19,6 +19,18 @@ const HomePage = () => {
 
   return (
     <>
+      <meta property="og:title" content={translate("homePageOpenGraphTitle", lang)} />
+      <meta
+        property="og:description"
+        content={[
+          translate("homePageWelcomeParagraph1", lang),
+          translate("homePageWelcomeParagraph2", lang),
+          translate("homePageWelcomeParagraph3", lang),
+          translate("homePageWelcomeParagraph4", lang),
+          translate("homePageWelcomeParagraph5", lang),
+          translate("homePageWelcomeParagraph6", lang),
+        ].join(" ")}
+      />
       <div className="home-page-grid">
         <div style={{ flex: 2, minWidth: "250px" }}>
           <Deferred isWaiting={blogPostsLoading}>
@@ -43,12 +55,14 @@ const HomePage = () => {
             />
             <div>
               <p>
-                {translate("homePageWelcomeParagraph1", lang)}{" "}
-                {translate("homePageWelcomeParagraph2", lang)}{" "}
-                {translate("homePageWelcomeParagraph3", lang)}{" "}
-                {translate("homePageWelcomeParagraph4", lang)}{" "}
-                {translate("homePageWelcomeParagraph5", lang)}{" "}
-                {translate("homePageWelcomeParagraph6", lang)}
+                {[
+                  translate("homePageWelcomeParagraph1", lang),
+                  translate("homePageWelcomeParagraph2", lang),
+                  translate("homePageWelcomeParagraph3", lang),
+                  translate("homePageWelcomeParagraph4", lang),
+                  translate("homePageWelcomeParagraph5", lang),
+                  translate("homePageWelcomeParagraph6", lang),
+                ].join(" ")}
               </p>
             </div>
           </div>
